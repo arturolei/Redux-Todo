@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import {mark_completed} from '../actions'
+import './todo.css'
 
 class TodoList extends React.Component {
     toggleCompleted = (event,index) => {
@@ -11,9 +12,9 @@ class TodoList extends React.Component {
         return (
         <ul>
             {this.props.listOfTodos.map((todoItem,index) => (
-                <li key={index} onClick={event => this.toggleCompleted(event,index)}>
-                    <p>{todoItem.value}</p> 
-                    <p> Completed: {todoItem.completed ? "YES":"NO"}</p>
+                <li className="todo-list-item" key={index} onClick={event => this.toggleCompleted(event,index)}>
+                    <p className ={todoItem.completed ? "todo-list-item-completed":null}>{todoItem.value}</p> 
+                    <p className ={todoItem.completed ? "todo-list-item-completed":null}> Completed: {todoItem.completed ? "YES":"NO"}</p>
                 </li>
                    
                 ))}

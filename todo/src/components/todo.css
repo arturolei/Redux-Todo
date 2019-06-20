@@ -1,0 +1,10 @@
+.todo-list-item {
+    border: 1px solid black;
+    margin: 2%;
+}
+
+.todo-list-item-completed {
+    background-color: beige;
+    color: darkred;
+    text-decoration: line-through;
+}
