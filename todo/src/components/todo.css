@@ -3,6 +3,8 @@
     margin: 2%;
 }
 
+/*Color changed when task is clicked/selcted as done*/
+
 .todo-list-item-completed {
     background-color: beige;
     color: darkred;
